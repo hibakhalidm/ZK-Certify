@@ -1,13 +1,53 @@
 {
   "name": "zk-certify",
   "version": "1.0.0",
-  "description": "Main package for ZK-Certify project.",
+  "description": "Privacy-Preserving Credential Verification for African Development",
   "scripts": {
-    "start": "node index.js"
+    "start": "next start",
+    "dev": "next dev",
+    "build": "next build",
+    "test": "hardhat test",
+    "compile": "hardhat compile",
+    "deploy": "hardhat run scripts/deploy.js --network midnight",
+    "lint": "eslint .",
+    "format": "prettier --write ."
   },
-  "dependencies": {},
-  "devDependencies": {},
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "dependencies": {
+    "@midnight/compact": "^0.1.0",
+    "@zkpass/sdk": "^1.0.0",
+    "@nameless/sdk": "^1.0.0",
+    "next": "^14.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "ethers": "^6.0.0",
+    "hardhat": "^2.19.0",
+    "@chakra-ui/react": "^2.8.0",
+    "@emotion/react": "^11.11.0",
+    "@emotion/styled": "^11.11.0",
+    "framer-motion": "^10.16.0",
+    "tensorflow": "^4.0.0",
+    "tensorflow-models": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.0",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0",
+    "eslint": "^8.0.0",
+    "eslint-config-next": "^14.0.0",
+    "prettier": "^3.0.0",
+    "@nomicfoundation/hardhat-toolbox": "^3.0.0",
+    "@nomicfoundation/hardhat-chai-matchers": "^2.0.0",
+    "chai": "^4.3.0",
+    "mocha": "^10.0.0"
+  },
+  "keywords": [
+    "blockchain",
+    "zero-knowledge",
+    "credentials",
+    "africa",
+    "education",
+    "privacy"
+  ],
+  "author": "ZK-Certify Team",
+  "license": "MIT"
 }

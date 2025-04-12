@@ -1,24 +1,38 @@
 const hre = require("hardhat");
 
 async function main() {
-  const ZKCertify = await hre.ethers.getContractFactory("ZKCertify");
-  const zkCertify = await ZKCertify.deploy();
-
-  console.log("Deployment transaction sent:", zkCertify.deploymentTransaction.hash);
-
-  const receipt = await zkCertify.deploymentTransaction.wait();
-  console.log("Deployment transaction mined:", receipt.transactionHash);
-  console.log("Transaction receipt:", receipt);
-  console.log("Contract Address from receipt:", receipt.contractAddress);
-
-  await zkCertify.deployed(); // Ensure the contract is deployed
-
-  console.log("ZKCertify deployed to:", zkCertify.address);
+  // Get the contract factory
+  const CredentialManager = await hre.ethers.getContractFactory("CredentialManager");
+  
+  // Deploy the Verifier contract first
+  const Verifier = await hre.ethers.getContractFactory("Verifier");
+  const verifier = await Verifier.deploy();
+  await verifier.deployed();
+  
+  console.log("Verifier deployed to:", verifier.address);
+  
+  // Deploy the CredentialManager contract
+  const credentialManager = await CredentialManager.deploy(verifier.address);
+  await credentialManager.deployed();
+  
+  console.log("CredentialManager deployed to:", credentialManager.address);
+  
+  // Authorize some initial issuers
+  const issuers = [
+    "0x1234567890123456789012345678901234567890", // University of Ghana
+    "0x0987654321098765432109876543210987654321", // University of Lagos
+    "0x1111111111111111111111111111111111111111"  // University of Nairobi
+  ];
+  
+  for (const issuer of issuers) {
+    await credentialManager.authorizeIssuer(issuer);
+    console.log(`Authorized issuer: ${issuer}`);
+  }
 }
 
 main()
-  .then(() => process.exist(0))
+  .then(() => process.exit(0))
   .catch((error) => {
-  console.error(error);
-  process.exitCode = 1;
-});
+    console.error(error);
+    process.exit(1);
+  });
