@@ -1,123 +1,97 @@
-# TrustSeal: Privacy-Preserving Credential Verification
+# TrustSeal
 
-A blockchain-based system for privacy-preserving credential verification, compatible with both Midnight and Cardano networks.
+**TrustSeal** is a privacy-preserving credential verification system that allows universities, training institutions, and certifying bodies to issue blockchain-based credentials. These credentials can be verified by employers, funding bodies, and accelerators using Zero-Knowledge Proofs (ZKPs), without revealing sensitive student information.
 
-## 🎯 Bounty Compliance
+---
 
-### Midnight Bounty ($7k)
-- ✅ Privacy-preserving credential management
-- ✅ ZK-proof verification system
-- ✅ Lace Wallet integration (placeholder)
-- ✅ Midnight testnet deployment ready
+## 🌍 Problem It Solves
+Young people in many African countries face:
+- Difficulty accessing funding
+- Lack of verifiable skills and credentials
+- IP theft of their innovations
 
-### Cardano Bounty
-- ✅ Plutus compatibility stubs
-- ✅ NFT credential representation plan
-- ✅ Cardano wallet integration plan
+TrustSeal addresses this by providing:
+- Verified credentials (on-chain)
+- ZK-based proof of legitimacy
+- Privacy-preserving verification
+- Future integration for IP & crowdfunding support
 
-## 🛠 Technical Stack
+---
 
-### Midnight Integration
-- Smart Contracts: Midnight-compatible Solidity
-- Privacy: Midnight's native privacy features
-- ZK Proofs: Midnight's ZK system
-- Wallet: Lace Wallet integration
+## 🔧 Tech Stack
+- **Blockchain**: Ethereum Holesky (current), soon Midnight/Cardano (via Lace Wallet)
+- **ZK Proofs**: Noir (current), zkPass planned
+- **Contracts**: Solidity (ERC-721 for credential NFTs)
+- **Frontend**: Next.js, ethers.js, MUI
+- **Storage**: IPFS/Arweave (for optional metadata)
+- **Identity Verification**: See3
+- **Fraud Detection (Planned)**: Flock
 
-### Cardano Integration (Future)
-- Smart Contracts: Plutus compatibility
-- NFTs: Cardano NFT standards
-- Wallet: Lace Wallet support
+---
 
-## 📦 Installation
+## 🚀 Features
+- Connect MetaMask Wallet (will add Lace support)
+- Issue ZK-protected academic credentials
+- Verify credentials without revealing data
+- Use AI/ZK to prevent fake issuers (via Gaia + Midnight/See3)
 
-1. Clone the repository:
+---
+
+## ✅ Getting Started
+
 ```bash
-git clone https://github.com/your-repo/trustseal
-cd trustseal
-```
+# Clone the repo
+https://github.com/hibakhalidm/ZK-Certify
 
-2. Install dependencies:
-```bash
+# Install backend dependencies
+cd ZK-Certify
 npm install
+
+# Compile and deploy smart contract (currently on Holesky)
+npx hardhat compile
+npx hardhat run scripts/deploy.js --network holesky
+
+# Copy the contract address and ABI to frontend/contracts/ZKCertify.json
+
+# Install frontend dependencies
+cd zk-certify-frontend
+npm install
+
+# Run frontend
+npm run dev
+
+# Open localhost:3000 in your browser
 ```
 
-3. Set up environment variables:
-```bash
-cp .env.example .env
-# Edit .env with your credentials
-```
+---
 
-## 🚀 Deployment
+## 🔄 Next Updates
+- 🔁 Migrate contract to Midnight testnet
+- ✅ Add Cardano Lace Wallet integration
+- 🔒 Add zkPass for secure identity linking
+- 🧠 Add See3 for AVS credential validation
+- 🕵️ Integrate Flock for credential fraud detection
 
-### Midnight Testnet
-```bash
-npx hardhat run scripts/deploy.js --network midnight
-```
+---
 
-### Cardano Testnet (Future)
-```bash
-npx hardhat run scripts/deploy.js --network cardano
-```
+## 📋 License
+MIT
 
-## 🔍 Integration Paths
+---
 
-### Midnight Integration
-1. Smart Contract Deployment
-   - Deploy to Midnight testnet
-   - Configure privacy features
-   - Set up ZK proofs
+## 📣 Contact
+Team Lead: Hiba Khalid
+GitHub: [@hibakhalidm](https://github.com/hibakhalidm)
+Email: khalidhiba@gmail.com
 
-2. Wallet Integration
-   - Connect Lace Wallet
-   - Implement credential issuance
-   - Enable privacy-preserving verification
 
-### Cardano Integration (Future)
-1. Plutus Migration
-   - Convert smart contracts to Plutus
-   - Implement NFT standards
-   - Set up wallet integration
+---
 
-2. NFT Implementation
-   - Design NFT metadata structure
-   - Implement minting logic
-   - Set up verification system
+## 🌟 Contribute
+We welcome contributions. Please open issues or PRs to help build the future of verifiable skills in Africa.
 
-## 🔮 Future Integrations
+---
 
-### zkPass Integration
-- Privacy-preserving identity verification
-- Cross-chain credential validation
-- Zero-knowledge proof generation
+> Built for the African Blockchain Championship 🏆
 
-### See3 Integration
-- Decentralized identity management
-- Privacy-preserving authentication
-- Credential portability
-
-### FLock Integration
-- Federated learning for fraud detection
-- Privacy-preserving ML models
-- Cross-institution verification
-
-## 📝 Documentation
-
-- [Integration Guide](INTEGRATION.md)
-- [Smart Contract Documentation](contracts/README.md)
-- [Frontend Documentation](zk-certify-frontend/README.md)
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create your feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a Pull Request
-
-## 📄 License
-
-MIT License
-
-## 📞 Contact
-
-For questions or support, please open an issue in the repository. 
+---
