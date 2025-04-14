@@ -1,47 +1,39 @@
-# ZK-Certify: Privacy-Preserving Credential Verification for African Development
+# TrustSeal: Privacy-Preserving Credential Verification
 
-## Overview
-ZK-Certify is a blockchain-based system designed to combat academic and professional credential fraud in Africa using Zero-Knowledge Proofs (ZKPs). The solution enables trusted issuance and verification of credentials while protecting user privacy and ensuring authenticity.
+A blockchain-based system for privacy-preserving credential verification, compatible with both Midnight and Cardano networks.
 
-## Bounty Compliance
+## 🎯 Bounty Compliance
 
-| Bounty | Status | Deliverable |
-|--------|--------|-------------|
-| **Midnight ($7k)** | ✅ | ZK-proof credential issuance/verification on Midnight testnet |
-| **zkPass ($3k)** | ✅ | Ghana Card verification via zkPass schema |
-| **See3/Nameless ($1k)** | ✅ | Anonymous credential proof generation |
+### Midnight Bounty ($7k)
+- ✅ Privacy-preserving credential management
+- ✅ ZK-proof verification system
+- ✅ Lace Wallet integration (placeholder)
+- ✅ Midnight testnet deployment ready
 
-## UNDP Impact Mapping
+### Cardano Bounty
+- ✅ Plutus compatibility stubs
+- ✅ NFT credential representation plan
+- ✅ Cardano wallet integration plan
 
-| SDG | Impact | Implementation |
-|-----|--------|----------------|
-| **SDG 4 (Education)** | Combat academic fraud | Secure credential verification |
-| **SDG 16 (Governance)** | Promote transparency | Immutable credential records |
-| **SDG 8 (Work)** | Validate skills for employers | Privacy-preserving verification |
+## 🛠 Technical Stack
 
-## Technical Stack
+### Midnight Integration
+- Smart Contracts: Midnight-compatible Solidity
+- Privacy: Midnight's native privacy features
+- ZK Proofs: Midnight's ZK system
+- Wallet: Lace Wallet integration
 
-- **Smart Contracts**: Midnight's Compact language
-- **Identity Verification**: zkPass SDK
-- **Anonymous Proofs**: Nameless SDK
-- **AI Component**: ML-based fraud detection
-- **Frontend**: Next.js with Lace Wallet integration
+### Cardano Integration (Future)
+- Smart Contracts: Plutus compatibility
+- NFTs: Cardano NFT standards
+- Wallet: Lace Wallet support
 
-## Setup Guide
-
-### Prerequisites
-- Node.js (v18 or higher)
-- npm or yarn
-- Midnight testnet access
-- zkPass API credentials
-- Nameless SDK access
-
-### Installation
+## 📦 Installation
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/hibakhalidm/ZK-Certify
-cd ZK-Certify
+git clone https://github.com/your-repo/trustseal
+cd trustseal
 ```
 
 2. Install dependencies:
@@ -55,52 +47,77 @@ cp .env.example .env
 # Edit .env with your credentials
 ```
 
-4. Start the development server:
+## 🚀 Deployment
+
+### Midnight Testnet
 ```bash
-npm run dev
+npx hardhat run scripts/deploy.js --network midnight
 ```
 
-### Test Accounts
-- University: `university@test.com`
-- Student: `student@test.com`
-- Employer: `employer@test.com`
-
-## Project Structure
-
-```
-zk-certify/
-├── contracts/          # Smart contracts
-├── frontend/          # Next.js frontend
-├── scripts/           # Deployment scripts
-├── test/             # Test files
-└── ai/               # Fraud detection models
+### Cardano Testnet (Future)
+```bash
+npx hardhat run scripts/deploy.js --network cardano
 ```
 
-## Development
+## 🔍 Integration Paths
 
-### Smart Contracts
-- Located in `contracts/`
-- Written in Midnight's Compact language
-- Includes credential issuance and verification logic
+### Midnight Integration
+1. Smart Contract Deployment
+   - Deploy to Midnight testnet
+   - Configure privacy features
+   - Set up ZK proofs
 
-### Frontend
-- Next.js application in `frontend/`
-- Integrates zkPass for identity verification
-- Implements Nameless SDK for anonymous proofs
+2. Wallet Integration
+   - Connect Lace Wallet
+   - Implement credential issuance
+   - Enable privacy-preserving verification
 
-### AI Component
-- Fraud detection models in `ai/`
-- Trained on synthetic credential data
-- Flags suspicious patterns in credentials
+### Cardano Integration (Future)
+1. Plutus Migration
+   - Convert smart contracts to Plutus
+   - Implement NFT standards
+   - Set up wallet integration
 
-## Demo Video
-A 3-minute walkthrough demonstrating:
-1. Credential issuance
-2. Identity verification
-3. Anonymous proof generation
+2. NFT Implementation
+   - Design NFT metadata structure
+   - Implement minting logic
+   - Set up verification system
 
-## License
+## 🔮 Future Integrations
+
+### zkPass Integration
+- Privacy-preserving identity verification
+- Cross-chain credential validation
+- Zero-knowledge proof generation
+
+### See3 Integration
+- Decentralized identity management
+- Privacy-preserving authentication
+- Credential portability
+
+### FLock Integration
+- Federated learning for fraud detection
+- Privacy-preserving ML models
+- Cross-institution verification
+
+## 📝 Documentation
+
+- [Integration Guide](INTEGRATION.md)
+- [Smart Contract Documentation](contracts/README.md)
+- [Frontend Documentation](zk-certify-frontend/README.md)
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create your feature branch
+3. Commit your changes
+4. Push to the branch
+5. Create a Pull Request
+
+## 📄 License
+
 MIT License
 
-## Contact
+## 📞 Contact
+
 For questions or support, please open an issue in the repository. 
