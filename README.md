@@ -1,4 +1,4 @@
-# ZK-Certify: Privacy-Preserving Credential Verification for African Development
+# TrustSeal-icp: Privacy-Preserving Credential Verification for African Development
 
 ## Overview
 ZK-Certify is a blockchain-based system designed to combat academic and professional credential fraud in Africa using Zero-Knowledge Proofs (ZKPs). The solution enables trusted issuance and verification of credentials while protecting user privacy and ensuring authenticity.
